@@ -1,7 +1,7 @@
 #!/usr/bin/env ash
 
 # Installing Node (https://github.com/mhart/alpine-node)
-ln -s /usr/lib/npm/bin/npm-cli.js /usr/bin/npm
+#ln -s /usr/lib/npm/bin/npm-cli.js /usr/bin/npm
 
 # Installing Yarn
 curl -o- -L https://yarnpkg.com/install.sh | ash
