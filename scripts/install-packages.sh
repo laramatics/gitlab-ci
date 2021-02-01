@@ -7,6 +7,6 @@ apk --update add --no-cache --virtual .build-deps \
   bzip2-dev
 
 # Add Production Dependencies
-RUN apk add --update --no-cache \
+apk add --update --no-cache \
   freetype-dev \
   mysql-client
