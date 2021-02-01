@@ -1,8 +1,9 @@
 #!/usr/bin/env ash
 
 # Installing Node (https://github.com/mhart/alpine-node)
-npm i -g npm
-curl -o- -L https://yarnpkg.com/install.sh | bash
+
+# Installing Yarn
+curl -o- -L https://yarnpkg.com/install.sh | ash
 
 # Cleanup
 rm -rf /usr/share/man /var/cache/apk/* \
