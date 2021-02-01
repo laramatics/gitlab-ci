@@ -10,7 +10,6 @@ docker-php-ext-configure opcache --enable-opcache &&
   docker-php-ext-install -j "$(nproc)" \
     gmp \
     opcache \
-    imagick \
     mysqli \
     pdo \
     pdo_mysql \
@@ -23,3 +22,4 @@ docker-php-ext-configure opcache --enable-opcache &&
     pcntl \
     bcmath
 
+#imagick \
