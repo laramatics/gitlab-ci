@@ -4,7 +4,7 @@ ARG PHP_VERSION=8.0.1
 FROM mhart/alpine-node:${NODE_VERSION} AS alpine-node
 FROM php:${PHP_VERSION}-alpine
 LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
-ENV NPM_VERSION=${NPM_VERSION}
+ENV INSTALL_NPM_VERSION=${NPM_VERSION}
 
 # Copy PHP Extension Installer (https://github.com/mlocati/docker-php-extension-installer)
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
