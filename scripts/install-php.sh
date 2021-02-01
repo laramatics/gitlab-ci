@@ -17,4 +17,3 @@ docker-php-ext-configure opcache --enable-opcache &&
     bcmath
 
 docker-php-ext-install -j "$(nproc)" gd
-#imagick \
