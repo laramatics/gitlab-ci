@@ -12,3 +12,4 @@ apk add --update --no-cache \
   freetype-dev \
   mysql-client \
   libwebp-dev \
+  icu-dev
