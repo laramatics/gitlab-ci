@@ -1,4 +1,4 @@
 #!/usr/bin/env ash
 
 # Remove Build Dependencies
-RUN apk del -f .build-deps
+apk del -f .build-deps
