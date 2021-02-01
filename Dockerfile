@@ -8,8 +8,7 @@ RUN echo -e "http://nl.alpinelinux.org/alpine/v3.5/main\nhttp://nl.alpinelinux.o
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
 # Install NodeJS
-COPY --from=mhart/alpine-node:15 /usr/bin/node /usr/bin/
-COPY --from=mhart/alpine-node:15 /usr/bin/npm /usr/bin/
+COPY --from=mhart/alpine-node:15 /usr/bin/node /usr/bin/npm /usr/bin/
 
 # Setting up dependencies
 COPY scripts /tmp
