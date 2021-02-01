@@ -3,6 +3,7 @@ ARG PHP_VERSION=8.0.1
 FROM mhart/alpine-node:${NODE_VERSION} AS alpine-node
 FROM php:${PHP_VERSION}-alpine
 LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
+# NOTE: ARGs before FROM cannot be accessed during build time (https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact)
 ARG NPM_VERSION=7.5.0
 ARG COMPOSER_VERSION=2
 

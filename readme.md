@@ -14,7 +14,7 @@ see [Docekr PHP Extension Installer](https://github.com/mlocati/docker-php-exten
 for available extensions, although you can install them yourself.
 
 ```dockerfile
-FROM immortalvision/gitlab-ci-php:latest
+FROM immortalvision/gitlab-ci-laravel:latest
 RUN docker-php-ext-install -j "$(nproc)" <package_name>
 ```
 
