@@ -1,15 +1,19 @@
-# gitlab-ci-php
+# Gitlab-CI-PHP
 
 This repository contains an `Dockerfile` which builds an image for your Gitlab CI/CD pipelines.
 
-## Adding PHP Extensions
+## Adding more PHP extensions
 
-If you want to add more extensions than it's already installed, you will have to build your own image based on the one
-currently built or modify
-`Dockerfile` to your liking.
+We created the `Dockerfile` with image size in mind, so only packages and extensions which is absolutely necessary is
+installed.
 
-FROM immortalvision/gitlab-ci-php:latest
+If you want to add more extensions, you will have to build your own image based on the one already built or modify
+the `Dockerfile` to your liking.
+
+see [Docekr PHP Extension Installer](https://github.com/mlocati/docker-php-extension-installer)
+for available extensions, although you can install them yourself.
 
 ```dockerfile
-RUN docker-php-ext-install -j "$(nproc)" gd
+FROM immortalvision/gitlab-ci-php:latest
+RUN docker-php-ext-install -j "$(nproc)" <package_name>
 ```
