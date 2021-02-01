@@ -10,10 +10,10 @@ COPY --from=mhart/alpine-node:15 /usr/bin/node /usr/bin/
 
 # Setting up dependencies
 COPY scripts /tmp
-RUN chmod +x /tmp/*.sh \
-    && ash /tmp/install-packages.sh \
-    #&& ash /tmp/install-node-yarn.sh \
-    && ash /tmp/install-php.sh
+RUN chmod +x /tmp/*.sh
+RUN ash /tmp/install-packages.sh
+#RUN ash /tmp/install-node-yarn.sh
+RUN ash /tmp/install-php.sh
 # Cleanup
 RUN ash /tmp/cleanup.sh
 RUN rm -rf /tmp/*
