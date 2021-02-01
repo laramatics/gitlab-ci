@@ -1,5 +1,7 @@
 # Gitlab-CI-PHP
 
+## About
+
 This repository contains an `Dockerfile` which builds an image for your Gitlab CI/CD pipelines.
 
 ## Adding more PHP extensions
@@ -16,6 +18,15 @@ for available extensions, although you can install them yourself.
 ```dockerfile
 FROM immortalvision/gitlab-ci-laravel:latest
 RUN docker-php-ext-install -j "$(nproc)" <package_name>
+```
+
+# Testing
+
+Tests are written using [GOSS](https://github.com/aelsabbahy/goss/tree/master/extras/dcgoss), to validate your container
+run:
+
+```shell
+GOSS_FILES_PATH=tests dgoss run --rm -it immortalvision/gitlab-ci-php:latest
 ```
 
 # References
