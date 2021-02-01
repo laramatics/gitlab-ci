@@ -1,15 +1,15 @@
+ARG NODE_VERSION=15
+ARG NPM_VERSION=7.5.0
+FROM mhart/alpine-node:${NODE_VERSION} AS alpine-node
 FROM php:8.0.1-alpine
 LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
-
-## this fixes dns issues
-#RUN echo -e "http://nl.alpinelinux.org/alpine/v3.5/main\nhttp://nl.alpinelinux.org/alpine/v3.5/community" > /etc/apk/repositories
 
 # Copy PHP Extension Installer (https://github.com/mlocati/docker-php-extension-installer)
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
 # Copy NodeJS
-COPY --from=mhart/alpine-node:15 /usr/bin/node /usr/bin/
-COPY --from=mhart/alpine-node:15 /usr/lib/* /usr/lib/
+COPY --from=alpine-node /usr/bin/node /usr/bin/
+COPY --from=alpine-node /usr/lib/* /usr/lib/
 
 # Copy Scripts
 COPY scripts /tmp
