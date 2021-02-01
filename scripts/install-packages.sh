@@ -4,7 +4,8 @@ apk --update add --no-cache --virtual .build-deps \
   libjpeg-turbo-dev \
   libpng-dev \
   libxml2-dev \
-  bzip2-dev
+  bzip2-dev \
+  libzip-dev
 
 # Add Production Dependencies
 apk add --update --no-cache \
