@@ -1,5 +1,6 @@
 #!/usr/bin/env ash
 apk --update add --no-cache --virtual .build-deps \
+  gnupg \
   zlib-dev \
   libjpeg-turbo-dev \
   libpng-dev \

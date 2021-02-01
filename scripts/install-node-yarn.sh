@@ -4,7 +4,7 @@
 ln -s /usr/lib/npm/bin/npm-cli.js /usr/bin/npm
 
 # Installing Yarn
-touch ~/.bash_profile
+touch ~/.profile
 curl -o- -L https://yarnpkg.com/install.sh | ash
 
 # Cleanup
