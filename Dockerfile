@@ -9,7 +9,7 @@ COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr
 
 # Install NodeJS
 COPY --from=mhart/alpine-node:15 /usr/bin/node /usr/bin/
-COPY --from=mhart/alpine-node:15 /usr/lib/npm /usr/lib/npm
+COPY --from=mhart/alpine-node:15 /usr/bin/npm /usr/bin/
 
 # Setting up dependencies
 COPY scripts /tmp
