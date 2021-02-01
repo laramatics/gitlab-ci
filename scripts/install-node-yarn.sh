@@ -8,6 +8,9 @@ npm install -g --force npm@${NPM_VERSION}
 touch ~/.profile
 curl -o- -L https://yarnpkg.com/install.sh | ash
 
+# Installing cloudflare-cli
+npm install -g cloudflare-cli
+
 # Cleanup
 rm -rf /usr/share/man /var/cache/apk/* \
   /root/.npm /root/.node-gyp /root/.gnupg /usr/lib/node_modules/npm/man \
