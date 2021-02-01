@@ -2,8 +2,8 @@
 
 # Installing Node (https://github.com/mhart/alpine-node)
 ln -s /usr/lib/npm/bin/npm-cli.js /usr/bin/npm
-npm install -g --force npm@${INSTALL_NPM_VERSION}
-echo $INSTALL_NPM_VERSION
+npm install -g --force npm@${NPM_VERSION}
+echo $NPM_VERSION
 
 # Installing Yarn
 touch ~/.profile

@@ -1,7 +1,7 @@
 #!/usr/bin/env ash
 
 # Installing Composer
-install-php-extensions @composer-${INSTALL_COMPOSER_VERSION}
+install-php-extensions @composer-${COMPOSER_VERSION}
 
 # Installing PHP Extensions
 docker-php-ext-configure opcache --enable-opcache &&
