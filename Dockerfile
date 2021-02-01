@@ -15,4 +15,5 @@ RUN chmod +x /tmp/*.sh \
     #&& ash /tmp/install-node-yarn.sh \
     && ash /tmp/install-php.sh
 # Cleanup
+RUN ash /tmp/cleanup.sh
 RUN rm -rf /tmp/*
