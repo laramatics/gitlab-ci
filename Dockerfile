@@ -12,7 +12,7 @@ COPY --from=mhart/alpine-node:15 /usr/bin/node /usr/bin/
 COPY scripts /tmp
 RUN chmod +x /tmp/*.sh
 RUN ash /tmp/install-packages.sh
-#RUN ash /tmp/install-node-yarn.sh
+RUN ash /tmp/install-node-yarn.sh
 RUN ash /tmp/install-php.sh
 # Cleanup
 RUN ash /tmp/cleanup.sh
