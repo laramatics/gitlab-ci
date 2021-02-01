@@ -12,9 +12,9 @@ docker-php-ext-configure opcache --enable-opcache &&
     pdo_mysql \
     sockets \
     intl \
-    gd \
     bz2 \
     pcntl \
-    bcmath
+    bcmath \
+    gd
 
 #imagick \

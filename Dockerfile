@@ -1,7 +1,8 @@
 ARG NODE_VERSION=15
 ARG NPM_VERSION=7.5.0
+ARG PHP_VERSION=8.0.1
 FROM mhart/alpine-node:${NODE_VERSION} AS alpine-node
-FROM php:8.0.1-alpine
+FROM php:${PHP_VERSION}-alpine
 LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
 
 # Copy PHP Extension Installer (https://github.com/mlocati/docker-php-extension-installer)
