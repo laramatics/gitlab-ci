@@ -17,3 +17,7 @@ for available extensions, although you can install them yourself.
 FROM immortalvision/gitlab-ci-php:latest
 RUN docker-php-ext-install -j "$(nproc)" <package_name>
 ```
+
+# References
+
+- [Useful Issue](https://github.com/docker-library/php/issues/1049)
