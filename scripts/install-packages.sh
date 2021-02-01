@@ -10,4 +10,5 @@ apk --update add --no-cache --virtual .build-deps \
 # Add Production Dependencies
 apk add --update --no-cache \
   freetype-dev \
-  mysql-client
+  mysql-client \
+  libwebp-dev \
