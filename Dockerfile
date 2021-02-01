@@ -8,7 +8,7 @@ LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
 # Copy NodeJS
-COPY --from=mhart/alpine-node:15 /usr/bin/node /usr/bin/npm /usr/bin/
+COPY --from=mhart/alpine-node:15 /usr/bin/node /usr/bin/
 COPY --from=mhart/alpine-node:15 /usr/lib/* /usr/lib/
 
 # Copy Scripts
