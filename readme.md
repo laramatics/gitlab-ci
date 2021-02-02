@@ -12,7 +12,8 @@
 
 ## About
 
-This repository contains a `Dockerfile` which builds an image for your Laravel app Gitlab CI/CD pipelines.
+This repository contains a `Dockerfile` which builds an [image](https://hub.docker.com/r/laramatics/gitlab-ci)
+for your Laravel app Gitlab CI/CD pipelines.
 
 ### Table of Contents
 
