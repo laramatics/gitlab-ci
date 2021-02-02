@@ -54,7 +54,7 @@ are installed.
 |PHP|8.0.1|`PHP_VERSION`|
 |Composer|2.0.9|`COMPOSER_VERSION`|
 |Node|15.7.0|`NODE_VERSION`|
-|NPM|7.5.1|`NPM_VERSION`|
+|NPM|7.5.2|`NPM_VERSION`|
 |[reg](https://github.com/genuinetools/reg)|latest|`N/A`|
 |[cfcli](https://github.com/danielpigott/cloudflare-cli)|latest|`N/A`|
 |[local-php-security-checker](https://github.com/fabpot/local-php-security-checker)|latest|`N/A`|
@@ -69,7 +69,7 @@ git clone https://github.com/laramatics/gitlab-ci.git
 cd gitlab-ci
 # modify files...
 docker build \
-  --build-arg NPM_VERSION=7.5.1 \
+  --build-arg NPM_VERSION=7.5.2 \
   --build-arg PHP_VERSION=8.0.1 \
   -t <image_name> .
 ```
