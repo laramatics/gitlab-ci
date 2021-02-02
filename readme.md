@@ -4,6 +4,7 @@
 
 ![GitHub](https://img.shields.io/github/license/laramatics/gitlab-ci)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/laramatics/gitlab-ci/latest)
+![Docker Pulls](https://img.shields.io/docker/pulls/laramatics/gitlab-ci)
 ![Docker Image Version (latest semver)](https://img.shields.io/docker/v/laramatics/gitlab-ci)
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/laramatics/gitlab-ci)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/laramatics/gitlab-ci)
