@@ -34,12 +34,12 @@ Although folder structure is self-explanatory, description is as below:
 ├── LICENSE
 ├── readme.md
 ├── scripts
-│   ├── cleanup.sh # removes build dependencies for lighter image size.
-│   ├── install-node-yarn.sh # install your global npm/yarn packages here.
-│   ├── install-packages.sh # OS packages will be installed by this file.
-│   └── install-php.sh # php extensions and installation.
+│   ├── cleanup.sh            # removes build dependencies for lighter image size.
+│   ├── install-node-yarn.sh  # install your global npm/yarn packages here.
+│   ├── install-packages.sh   # OS packages will be installed by this file.
+│   └── install-php.sh        # php extensions and installation.
 └── tests
-    └── goss.yaml # see "testing" section
+    └── goss.yaml             # see "testing" section
 ```
 
 ## Packages and Services
