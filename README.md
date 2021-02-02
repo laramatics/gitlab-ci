@@ -107,7 +107,7 @@ Tests are written using [GOSS](https://github.com/aelsabbahy/goss/tree/master/ex
 modifying source files and building your own image, run:
 
 ```shell
-GOSS_FILES_PATH=tests dgoss run --rm -it <image_name>
+GOSS_FILES_PATH=tests dgoss run -it <image_name>
 ```
 
 # References
