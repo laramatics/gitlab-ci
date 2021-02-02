@@ -14,7 +14,8 @@ docker-php-ext-configure opcache --enable-opcache &&
     intl \
     bz2 \
     pcntl \
-    bcmath
+    bcmath \
+    exif
 
 # note: for some reason if we build gd with the rest of the extensions it will trow an error in php -v
 docker-php-ext-install -j "$(nproc)" gd
