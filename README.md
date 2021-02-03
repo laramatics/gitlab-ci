@@ -96,7 +96,7 @@ image from `laramatics/gitlab-ci` or clone this repo and modify files to suit yo
 ```shell
 git clone https://github.com/laramatics/gitlab-ci.git
 cd gitlab-ci
-# modify files...
+# Modify files...
 docker build -t <image_name> .
 ```
 
