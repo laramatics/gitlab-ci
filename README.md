@@ -41,7 +41,7 @@ Although folder structure is self-explanatory, description is as below:
 │   ├── install-packages.sh   # OS packages will be installed by this file.
 │   └── install-php.sh        # PHP extensions and installation.
 └── tests
-    └── goss.yaml             # see "testing" section
+    └── goss.yaml             # See "testing" section
 ```
 
 ## Packages and Services
