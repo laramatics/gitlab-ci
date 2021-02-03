@@ -13,7 +13,7 @@
 
 ## About
 
-This repository contains a `Dockerfile` which builds an [image](https://hub.docker.com/r/laramatics/gitlab-ci)
+A `Dockerfile` for building an [image](https://hub.docker.com/r/laramatics/gitlab-ci)
 for your Laravel app Gitlab CI/CD pipelines.
 
 ### Table of Contents
@@ -36,17 +36,17 @@ Although folder structure is self-explanatory, description is as below:
 ├── LICENSE
 ├── readme.md
 ├── scripts
-│   ├── cleanup.sh            # removes build dependencies for lighter image size.
-│   ├── install-node-yarn.sh  # install your global npm/yarn packages here.
+│   ├── cleanup.sh            # Removes build dependencies for lighter image size.
+│   ├── install-node-yarn.sh  # Install your global npm/yarn packages here.
 │   ├── install-packages.sh   # OS packages will be installed by this file.
-│   └── install-php.sh        # php extensions and installation.
+│   └── install-php.sh        # PHP extensions and installation.
 └── tests
     └── goss.yaml             # see "testing" section
 ```
 
 ## Packages and Services
 
-We created the `Dockerfile` with image size in mind, so only packages and PHP extensions which is absolutely necessary
+We created the `Dockerfile` with image size in mind, only packages and PHP extensions which are absolutely necessary
 are installed.
 
 |Service|Version|Argument|
@@ -61,13 +61,13 @@ are installed.
 
 ### Customizing build versions
 
-As you can see in the table above, some services has an argument in `Dockerfile` for you to modify installation version,
-to do that, you need to clone the repo and build the image yourself:
+As you can see in the table above, some services have an argument in `Dockerfile` for you to modify the installation version.
+To do so, you need to clone the repo and build the image yourself:
 
 ```bash
 git clone https://github.com/laramatics/gitlab-ci.git
 cd gitlab-ci
-# modify files...
+# Modify files...
 docker build \
   --build-arg NPM_VERSION=7.5.2 \
   --build-arg PHP_VERSION=8.0.1 \
@@ -77,15 +77,14 @@ docker build \
 ### Adding more PHP extensions
 
 If you want to add more extensions to the PHP installation, you will have to build your own image based on the one
-already built or modify the `Dockerfile` and `scripts/*` to your liking and build your own image from that as
-described [here](#adding-more-packages).
+already built or modify the `Dockerfile` and `scripts/*` to your liking and [build your own image from it](#adding-more-packages).
 
-see [Docker PHP Extension Installer](https://github.com/mlocati/docker-php-extension-installer)
-for available extensions, although you can install them fom source if you will.
+See [Docker PHP Extension Installer](https://github.com/mlocati/docker-php-extension-installer)
+for available extensions, alternatively you can install them fom source.
 
 ```dockerfile
 FROM laramatics/gitlab-ci:latest
-# add your extentions here...
+# Add your extentions here...
 RUN docker-php-ext-install -j "$(nproc)" <package_name>
 ```
 
