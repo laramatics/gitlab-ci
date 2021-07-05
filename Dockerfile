@@ -1,10 +1,10 @@
-ARG NODE_VERSION=15
-ARG PHP_VERSION=8.0.1
+ARG NODE_VERSION=16
+ARG PHP_VERSION=8.0.8
 FROM mhart/alpine-node:${NODE_VERSION} AS alpine-node
-FROM php:${PHP_VERSION}-alpine
+FROM php:${PHP_VERSION}-fpm-alpine
 LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
 # NOTE: ARGs before FROM cannot be accessed during build time (https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact)
-ARG NPM_VERSION=7.5.2
+ARG NPM_VERSION=7.19.1
 ARG COMPOSER_VERSION=2
 
 # Copy PHP Extension Installer (https://github.com/mlocati/docker-php-extension-installer)
