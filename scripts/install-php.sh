@@ -5,7 +5,7 @@ install-php-extensions @composer-${COMPOSER_VERSION}
 
 # Installing PHP Extensions
 docker-php-ext-configure opcache --enable-opcache &&
-  docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-png --with-webp &&
+  docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp &&
   docker-php-ext-configure zip &&
   docker-php-ext-install -j "$(nproc)" \
     mysqli \
