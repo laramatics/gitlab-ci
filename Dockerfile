@@ -4,7 +4,7 @@ FROM mhart/alpine-node:${NODE_VERSION} AS alpine-node
 FROM php:${PHP_VERSION}-alpine
 LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
 # NOTE: ARGs before FROM cannot be accessed during build time (https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact)
-ARG NPM_VERSION=7.5.2
+ARG NPM_VERSION=8.1.2
 ARG COMPOSER_VERSION=2
 
 # Copy PHP Extension Installer (https://github.com/mlocati/docker-php-extension-installer)
