@@ -9,6 +9,7 @@ docker-php-ext-configure opcache --enable-opcache &&
   docker-php-ext-configure zip &&
   docker-php-ext-install -j "$(nproc)" \
     mysqli \
+    zip \
     pdo_mysql \
     sockets \
     intl \
