@@ -55,7 +55,7 @@ are installed.
 |Composer|2.1.11|`COMPOSER_VERSION`|
 |Node|16.4.2|`NODE_VERSION`|
 |NPM|8.1.2|`NPM_VERSION`|
-|NPM|latest|`N/A`|
+|Yarn|latest|`N/A`|
 |[reg](https://github.com/genuinetools/reg)|latest|`N/A`|
 |[cfcli](https://github.com/danielpigott/cloudflare-cli)|latest|`N/A`|
 |[local-php-security-checker](https://github.com/fabpot/local-php-security-checker)|latest|`N/A`|
