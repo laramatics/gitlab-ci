@@ -51,10 +51,11 @@ are installed.
 
 |Service|Version|Argument|
 |---|:---:|:---:|
-|PHP|8.0.1|`PHP_VERSION`|
-|Composer|2.0.9|`COMPOSER_VERSION`|
-|Node|15.7.0|`NODE_VERSION`|
-|NPM|7.5.2|`NPM_VERSION`|
+|PHP|8.1|`PHP_VERSION`|
+|Composer|2.1.11|`COMPOSER_VERSION`|
+|Node|16.4.2|`NODE_VERSION`|
+|NPM|8.1.2|`NPM_VERSION`|
+|NPM|latest|`N/A`|
 |[reg](https://github.com/genuinetools/reg)|latest|`N/A`|
 |[cfcli](https://github.com/danielpigott/cloudflare-cli)|latest|`N/A`|
 |[local-php-security-checker](https://github.com/fabpot/local-php-security-checker)|latest|`N/A`|
