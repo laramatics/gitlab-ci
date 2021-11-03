@@ -1,5 +1,5 @@
-ARG NODE_VERSION=15
-ARG PHP_VERSION=8.0.1
+ARG NODE_VERSION=16.4.2
+ARG PHP_VERSION=8.1
 FROM mhart/alpine-node:${NODE_VERSION} AS alpine-node
 FROM php:${PHP_VERSION}-alpine
 LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
