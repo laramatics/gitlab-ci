@@ -51,7 +51,7 @@ are installed.
 
 |Service|Version|Argument|
 |---|:---:|:---:|
-|PHP|8.1|`PHP_VERSION`|
+|PHP|8.0.12|`PHP_VERSION`|
 |Composer|2.1.11|`COMPOSER_VERSION`|
 |Node|16.4.2|`NODE_VERSION`|
 |NPM|8.1.2|`NPM_VERSION`|
