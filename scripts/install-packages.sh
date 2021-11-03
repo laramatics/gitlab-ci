@@ -17,7 +17,8 @@ apk add --update --no-cache \
   libjpeg-turbo-dev \
   libpng-dev \
   libzip-dev \
-  zip
+  zip \
+  sqlite-dev
 
 # Installing PHP Security Checker
 PHP_SC_VERSION=$(curl -s "https://api.github.com/repos/fabpot/local-php-security-checker/releases/latest" |
