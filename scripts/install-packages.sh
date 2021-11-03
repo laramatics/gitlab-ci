@@ -3,9 +3,7 @@ apk --update add --no-cache --virtual .build-deps \
   gnupg \
   zlib-dev \
   libxml2-dev \
-  bzip2-dev \
-  libzip-dev \
-  zip
+  bzip2-dev
 
 # Add Production Dependencies
 apk add --update --no-cache \
@@ -17,7 +15,9 @@ apk add --update --no-cache \
   libwebp-dev \
   icu-dev \
   libjpeg-turbo-dev \
-  libpng-dev
+  libpng-dev \
+  libzip-dev \
+  zip
 
 # Installing PHP Security Checker
 PHP_SC_VERSION=$(curl -s "https://api.github.com/repos/fabpot/local-php-security-checker/releases/latest" |
