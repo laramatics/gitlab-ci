@@ -9,7 +9,6 @@ docker-php-ext-configure opcache --enable-opcache &&
   docker-php-ext-configure zip --with-libzip &&
   docker-php-ext-install -j "$(nproc)" \
     mysqli \
-    zip \
     pdo_mysql \
     sockets \
     intl \
@@ -17,6 +16,8 @@ docker-php-ext-configure opcache --enable-opcache &&
     pcntl \
     bcmath \
     exif
+
+docker-php-ext-install -j "$(nproc)" zip
 
 # note: for some reason if we build gd with the rest of the extensions it will trow an error in php -v
 docker-php-ext-install -j "$(nproc)" gd
