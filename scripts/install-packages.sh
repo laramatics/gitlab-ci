@@ -6,7 +6,8 @@ apk --update add --no-cache --virtual .build-deps \
   libpng-dev \
   libxml2-dev \
   bzip2-dev \
-  libzip-dev
+  libzip-dev \
+  zip
 
 # Add Production Dependencies
 apk add --update --no-cache \
