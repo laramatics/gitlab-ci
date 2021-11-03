@@ -2,8 +2,6 @@
 apk --update add --no-cache --virtual .build-deps \
   gnupg \
   zlib-dev \
-  libjpeg-turbo-dev \
-  libpng-dev \
   libxml2-dev \
   bzip2-dev \
   libzip-dev \
@@ -17,7 +15,9 @@ apk add --update --no-cache \
   freetype-dev \
   mysql-client \
   libwebp-dev \
-  icu-dev
+  icu-dev \
+  libjpeg-turbo-dev \
+  libpng-dev
 
 # Installing PHP Security Checker
 PHP_SC_VERSION=$(curl -s "https://api.github.com/repos/fabpot/local-php-security-checker/releases/latest" |
