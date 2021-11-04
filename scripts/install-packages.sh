@@ -17,7 +17,6 @@ apk add --update --no-cache \
   libwebp-dev \
   icu-dev \
   jpeg-dev \
-  libjpeg-dev \
   libjpeg-turbo \
   libjpeg-turbo-dev \
   libpng-dev \
