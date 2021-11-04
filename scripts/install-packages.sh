@@ -14,7 +14,7 @@ apk add --update --no-cache \
   mysql-client \
   libwebp-dev \
   icu-dev \
-  jpeg-dev \
+  libjpeg-dev \
   libjpeg-turbo-dev \
   libpng-dev \
   libzip-dev \
