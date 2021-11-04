@@ -1,4 +1,6 @@
 #!/usr/bin/env ash
+apk update && apk upgrade
+
 apk --update add --no-cache --virtual .build-deps \
   gnupg \
   zlib-dev \
@@ -14,7 +16,7 @@ apk add --update --no-cache \
   mysql-client \
   libwebp-dev \
   icu-dev \
-  libjpeg-dev \
+  jpeg-dev \
   libjpeg-turbo-dev \
   libpng-dev \
   libzip-dev \
