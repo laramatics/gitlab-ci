@@ -8,14 +8,14 @@ docker-php-ext-configure opcache --enable-opcache &&
   docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp &&
   docker-php-ext-configure zip --with-libzip &&
   docker-php-ext-install -j "$(nproc)" \
-    mysqli \
-    pdo_mysql \
     sockets \
     intl \
     bz2 \
     pcntl \
     bcmath \
     exif
+
+docker-php-ext-install -j "$(nproc)" mysqli pdo pdo_mysql
 
 docker-php-ext-install -j "$(nproc)" zip
 
