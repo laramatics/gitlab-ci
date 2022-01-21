@@ -1,18 +1,21 @@
-ARG NODE_VERSION=16.4.2
-ARG PHP_VERSION=8.0.12
-FROM mhart/alpine-node:${NODE_VERSION} AS alpine-node
-FROM php:${PHP_VERSION}-alpine
+ARG NODE_VERSION=17-alpine
+ARG PHP_VERSION=8.1-fpm-alpine
+FROM node:${NODE_VERSION} AS node
+FROM php:${PHP_VERSION}
 LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
 # NOTE: ARGs before FROM cannot be accessed during build time (https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact)
-ARG NPM_VERSION=8.1.2
+ARG NPM_VERSION=8.3.2
 ARG COMPOSER_VERSION=2
 
 # Copy PHP Extension Installer (https://github.com/mlocati/docker-php-extension-installer)
-COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+RUN chmod +x /usr/local/bin/install-php-extensions
 
 # Copy NodeJS
-COPY --from=alpine-node /usr/bin/node /usr/bin/
-COPY --from=alpine-node /usr/lib/* /usr/lib/
+COPY --from=node /usr/local/bin/node /usr/local/bin/
+COPY --from=node /usr/local/lib/node_modules /usr/local/lib/node_modules
+RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
+RUN ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx
 
 # Copy Scripts
 COPY scripts /tmp

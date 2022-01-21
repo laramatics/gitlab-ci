@@ -1,7 +1,6 @@
 #!/usr/bin/env ash
 
-# Installing Node (https://github.com/mhart/alpine-node)
-ln -s /usr/lib/npm/bin/npm-cli.js /usr/bin/npm
+# Installing Node
 npm install -g --force npm@${NPM_VERSION}
 
 # Installing Yarn

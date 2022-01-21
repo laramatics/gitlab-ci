@@ -1,7 +1,8 @@
 #!/usr/bin/env ash
 
 # Installing Composer
-install-php-extensions @composer-${COMPOSER_VERSION}
+install-php-extensions @composer-${COMPOSER_VERSION} imagick
+# note: install-php-extensions installs are much easier than docker-php-ext-install
 
 # Installing PHP Extensions
 docker-php-ext-configure opcache --enable-opcache
@@ -22,3 +23,4 @@ docker-php-ext-install -j "$(nproc)" zip
 docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
 # note: for some reason if we build gd with the rest of the extensions it will trow an error in php -v
 docker-php-ext-install -j "$(nproc)" gd
+
