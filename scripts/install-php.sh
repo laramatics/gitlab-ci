@@ -7,13 +7,15 @@ install-php-extensions @composer-${COMPOSER_VERSION} imagick
 # Installing PHP Extensions
 docker-php-ext-configure opcache --enable-opcache
 docker-php-ext-configure zip --with-libzip
+docker-php-ext-configure imap --with-imap --with-imap-ssl
 docker-php-ext-install -j "$(nproc)" \
   sockets \
   intl \
   bz2 \
   pcntl \
   bcmath \
-  exif
+  exif \
+  imap
 
 docker-php-ext-install -j "$(nproc)" mysqli pdo pdo_mysql
 

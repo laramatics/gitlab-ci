@@ -22,7 +22,8 @@ apk add --update --no-cache \
   libpng-dev \
   libzip-dev \
   zip \
-  sqlite-dev
+  sqlite-dev \
+  imap-dev
 
 # Installing PHP Security Checker
 PHP_SC_VERSION=$(curl -s "https://api.github.com/repos/fabpot/local-php-security-checker/releases/latest" |
