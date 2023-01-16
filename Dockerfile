@@ -1,10 +1,10 @@
-ARG NODE_VERSION=17-alpine
-ARG PHP_VERSION=8.1-fpm-alpine
+ARG NODE_VERSION=19-alpine
+ARG PHP_VERSION=8.2-fpm-alpine
 FROM node:${NODE_VERSION} AS node
 FROM php:${PHP_VERSION}
 LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
 # NOTE: ARGs before FROM cannot be accessed during build time (https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact)
-ARG NPM_VERSION=8.3.2
+ARG NPM_VERSION=9.2.0
 ARG COMPOSER_VERSION=2
 
 # Copy PHP Extension Installer (https://github.com/mlocati/docker-php-extension-installer)
