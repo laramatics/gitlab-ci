@@ -49,20 +49,21 @@ Although folder structure is self-explanatory, description is as below:
 We created the `Dockerfile` with image size in mind, only packages and PHP extensions which are absolutely necessary
 are installed.
 
-|Service|Version|Argument|
-|---|:---:|:---:|
-|PHP|8.1.1|`PHP_VERSION`|
-|Composer|2.2.5|`COMPOSER_VERSION`|
-|Node|17.4.0|`NODE_VERSION`|
-|NPM|8.3.2|`NPM_VERSION`|
-|Yarn|latest|`N/A`|
-|[reg](https://github.com/genuinetools/reg)|latest|`N/A`|
-|[cfcli](https://github.com/danielpigott/cloudflare-cli)|latest|`N/A`|
-|[local-php-security-checker](https://github.com/fabpot/local-php-security-checker)|latest|`N/A`|
+|Service| Version |Argument|
+|---|:-------:|:---:|
+|PHP|  8.2.0  |`PHP_VERSION`|
+|Composer|  2.2.5  |`COMPOSER_VERSION`|
+|Node| 19.4.0  |`NODE_VERSION`|
+|NPM|  9.2.0  |`NPM_VERSION`|
+|Yarn| latest  |`N/A`|
+|[reg](https://github.com/genuinetools/reg)| latest  |`N/A`|
+|[cfcli](https://github.com/danielpigott/cloudflare-cli)| latest  |`N/A`|
+|[local-php-security-checker](https://github.com/fabpot/local-php-security-checker)| latest  |`N/A`|
 
 ### Customizing build versions
 
-As you can see in the table above, some services have an argument in `Dockerfile` for you to modify the installation version.
+As you can see in the table above, some services have an argument in `Dockerfile` for you to modify the installation
+version.
 To do so, you need to clone the repo and build the image yourself:
 
 ```bash
@@ -70,15 +71,16 @@ git clone https://github.com/laramatics/gitlab-ci.git
 cd gitlab-ci
 # Modify files...
 docker build \
-  --build-arg NPM_VERSION=8.3.2 \
-  --build-arg PHP_VERSION=8.1.1 \
+  --build-arg NPM_VERSION=9.2.0 \
+  --build-arg PHP_VERSION=8.2.0 \
   -t <image_name> .
 ```
 
 ### Adding more PHP extensions
 
 If you want to add more extensions to the PHP installation, you will have to build your own image based on the one
-already built or modify the `Dockerfile` and `scripts/*` to your liking and [build your own image from it](#adding-more-packages).
+already built or modify the `Dockerfile` and `scripts/*` to your liking
+and [build your own image from it](#adding-more-packages).
 
 See [Docker PHP Extension Installer](https://github.com/mlocati/docker-php-extension-installer)
 for available extensions, alternatively you can install them fom source.
