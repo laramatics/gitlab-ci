@@ -6,6 +6,7 @@ LABEL maintainer="Pezhvak <pezhvak@imvx.org>"
 # NOTE: ARGs before FROM cannot be accessed during build time (https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact)
 ARG NPM_VERSION=9.2.0
 ARG COMPOSER_VERSION=2
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # Copy PHP Extension Installer (https://github.com/mlocati/docker-php-extension-installer)
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
