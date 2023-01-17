@@ -4,14 +4,16 @@ apk update && apk upgrade
 apk --update add --no-cache --virtual .build-deps \
   gnupg \
   zlib-dev \
-  libxml2-dev \
-  bzip2-dev
+  libxml2-dev
 
 # Add Production Dependencies
 apk add --update --no-cache \
+  libpng \
+  freetype \
   openssh \
   git \
   sed \
+  bzip2-dev \
   freetype-dev \
   mysql-client \
   libwebp-dev \
