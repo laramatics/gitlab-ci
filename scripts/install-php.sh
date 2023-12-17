@@ -18,6 +18,7 @@ docker-php-ext-install -j "$(nproc)" zip
 install-php-extensions redis
 install-php-extensions intl
 install-php-extensions imap
+install-php-extensions exif
 
 docker-php-ext-configure pcntl --enable-pcntl &&
   docker-php-ext-install pcntl &&
