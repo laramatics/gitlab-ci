@@ -20,10 +20,10 @@ for your Laravel app Gitlab CI/CD pipelines.
 
 - [Folder Structure](#folder-structure)
 - [Packages and Services](#packages-and-services)
-    - [Customizing build versions](#customizing-build-versions)
-    - [Adding more PHP extensions](#adding-more-php-extensions)
-    - [Adding more packages](#adding-more-packages)
-    - [Testing](#testing)
+  - [Customizing build versions](#customizing-build-versions)
+  - [Adding more PHP extensions](#adding-more-php-extensions)
+  - [Adding more packages](#adding-more-packages)
+  - [Testing](#testing)
 - [References](#references)
 
 ## Folder Structure
@@ -49,16 +49,16 @@ Although folder structure is self-explanatory, description is as below:
 We created the `Dockerfile` with image size in mind, only packages and PHP extensions which are absolutely necessary
 are installed.
 
-|Service| Version |Argument|
-|---|:-------:|:---:|
-|PHP|  8.2.0  |`PHP_VERSION`|
-|Composer|  2.2.5  |`COMPOSER_VERSION`|
-|Node| 19.4.0  |`NODE_VERSION`|
-|NPM|  9.2.0  |`NPM_VERSION`|
-|Yarn| latest  |`N/A`|
-|[reg](https://github.com/genuinetools/reg)| latest  |`N/A`|
-|[cfcli](https://github.com/danielpigott/cloudflare-cli)| latest  |`N/A`|
-|[local-php-security-checker](https://github.com/fabpot/local-php-security-checker)| latest  |`N/A`|
+| Service                                                                            | Version |      Argument      |
+| ---------------------------------------------------------------------------------- | :-----: | :----------------: |
+| PHP                                                                                |  8.2.0  |   `PHP_VERSION`    |
+| Composer                                                                           |  2.2.5  | `COMPOSER_VERSION` |
+| Node                                                                               | 21.0.0  |   `NODE_VERSION`   |
+| NPM                                                                                | 10.2.0  |   `NPM_VERSION`    |
+| Yarn                                                                               | latest  |       `N/A`        |
+| [reg](https://github.com/genuinetools/reg)                                         | latest  |       `N/A`        |
+| [cfcli](https://github.com/danielpigott/cloudflare-cli)                            | latest  |       `N/A`        |
+| [local-php-security-checker](https://github.com/fabpot/local-php-security-checker) | latest  |       `N/A`        |
 
 ### Customizing build versions
 
