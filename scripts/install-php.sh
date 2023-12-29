@@ -27,3 +27,5 @@ docker-php-ext-configure pcntl --enable-pcntl &&
 docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
 # note: for some reason if we build gd with the rest of the extensions it will trow an error in php -v
 docker-php-ext-install -j "$(nproc)" gd
+
+docker-php-ext-install -j "$(nproc)" sockets
