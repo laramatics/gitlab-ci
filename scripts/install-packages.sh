@@ -1,6 +1,8 @@
 #!/usr/bin/env ash
 apk update && apk upgrade
 
+apk add --no-cache linux-headers
+
 apk --update add --no-cache --virtual .build-deps \
   gnupg \
   zlib-dev \
